@@ -744,7 +744,7 @@ public class LRecyclerView extends RecyclerView implements LuckRecyclerViewInter
     @Override
     public void setRefreshBackground(Drawable drawable) {
         if (mHeaderView != null) {
-            mHeaderView.getContainer().setBackground(drawable);
+            mHeaderView.getContainer().setBackgroundDrawable(drawable);
         }
     }
 

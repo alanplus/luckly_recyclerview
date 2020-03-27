@@ -73,7 +73,7 @@ public class LucklyRecyclerView extends LinearLayout implements LuckRecyclerView
 
     @Override
     public void setRefreshEnable(boolean enable) {
-        mLRecyclerView.setRefreshEnable(true);
+        mLRecyclerView.setRefreshEnable(enable);
     }
 
     @Override
