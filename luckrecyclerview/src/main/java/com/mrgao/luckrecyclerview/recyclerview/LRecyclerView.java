@@ -1031,14 +1031,17 @@ public class LRecyclerView extends RecyclerView implements LuckRecyclerViewInter
          */
         @Override
         public int getItemCount() {
+
+            int add = isFooterVisiable ? 2 : 1;
+
             if (mAdapter != null) {
                 if (mAdapter.getItemCount() > 0) {
-                    return mAdapter.getItemCount() + 2 + mHeaderViews.size();
+                    return mAdapter.getItemCount() + add + mHeaderViews.size();
                 } else {
-                    return mHeaderViews.size() + 2;
+                    return mHeaderViews.size() + add;
                 }
             } else {
-                return mHeaderViews.size() + 2;
+                return mHeaderViews.size() + add;
             }
 
 
@@ -1064,7 +1067,7 @@ public class LRecyclerView extends RecyclerView implements LuckRecyclerViewInter
             if (position >= 1 && position < mHeaderViews.size() + 1) {
                 return getHeaderTypeByPosition(position - 1);
             }
-            if (position == getItemCount() - 1) {
+            if (position == getItemCount() - 1 && isFooterVisiable) {
                 return FOOTER_TYPE;
             }
             int adapterCount;
