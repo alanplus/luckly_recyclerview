@@ -89,7 +89,7 @@ public class LRecyclerViewItemDivider extends RecyclerView.ItemDecoration {
         int left = recyclerView.getPaddingLeft();
         int right = recyclerView.getWidth() - recyclerView.getPaddingRight();
         int count = recyclerView.getChildCount();
-        for (int i = 0; i < count - 2; i++) {
+        for (int i = 1; i < count - 1; i++) {
             View view = recyclerView.getChildAt(i);
             //获取到每一个item的margin的值
 
