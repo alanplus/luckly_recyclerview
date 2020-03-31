@@ -969,7 +969,9 @@ public class LRecyclerView extends RecyclerView implements LuckRecyclerViewInter
             /**
              * 头部和底部不可点击
              */
-            if (position > 0 && position < getItemCount() - 1) {
+
+            int add = isFooterVisiable ? 1 : 0;
+            if (position > 0 && position < getItemCount() - add) {
                 if (position <= mHeaderViews.size() && onItemHeaderClickListener != null) {
 
                     holder.itemView.setOnClickListener(new OnClickListener() {
