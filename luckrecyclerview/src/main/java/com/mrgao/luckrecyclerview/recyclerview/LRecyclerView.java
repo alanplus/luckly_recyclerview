@@ -1265,7 +1265,7 @@ public class LRecyclerView extends RecyclerView implements LuckRecyclerViewInter
             }
 
             if (mFooterBackDrawable != null && mFooterView != null) {
-                mFooterView.setBackground(mFooterBackDrawable);
+                mFooterView.setBackgroundDrawable(mFooterBackDrawable);
             }
 
             if (mFooterBackcolor != -1 && mFooterView != null) {
